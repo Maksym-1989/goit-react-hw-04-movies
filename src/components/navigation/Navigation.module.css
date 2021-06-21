@@ -1,0 +1,18 @@
+.header_nav_link {
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.list {
+  display: flex;
+}
+
+.item {
+  margin-right: 30px;
+}
+
+.header_nav_link_active {
+  color: rgb(197, 31, 31);
+}

@@ -1,0 +1,102 @@
+.cardWrapper {
+  padding: 15px;
+}
+
+.btnGoBack {
+  color: white;
+  background-color: darkblue;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.btnGoBack:hover,
+.btnGoBack:focus {
+  background-color: rgb(5, 5, 8);
+}
+
+.img_box {
+  display: flex;
+  border: 1px solid darkblue;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.card_img {
+  margin-right: 30px;
+}
+
+.img {
+  width: 400px;
+}
+.card_title {
+  font-size: 30px;
+  padding: 0;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.card_subtitle {
+  color: firebrick;
+  margin-bottom: 15px;
+}
+
+.card_text {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(7, 58, 110);
+  margin-bottom: 10px;
+}
+
+.list {
+  display: flex;
+}
+
+.card_text_list {
+  margin-right: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(7, 58, 110);
+}
+
+.information_box {
+  border: 1px solid darkblue;
+  padding: 10px;
+}
+.title {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.list_group {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.list_item {
+  margin-right: 20px;
+  font-size: 22px;
+}
+
+.nav_link {
+  color: rgb(16, 16, 231);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.active {
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .img {
+    width: 100%;
+  }
+  .img_box {
+    display: block;
+  }
+  .card_img {
+    width: 100%;
+  }
+}
