@@ -18,18 +18,18 @@ class MovieDetailsPage extends Component {
   state = {
     movie: {},
     genres: [],
-    form: null,
+    from: null,
   };
 
   async componentDidMount() {
     const movieId = this.props.match.params.movieId;
-
     const response = await ApiMovies.fetchMovieDetails(movieId);
     this.setState({
       movie: response,
       genres: [...response.genres],
-      form: this.props.location.state,
+      from: this.props.location.state.from,
     });
+
   }
 
   getYear = (data) => String(data).slice(0, 4);
@@ -37,8 +37,9 @@ class MovieDetailsPage extends Component {
   getPercent = (vote) => vote * 10;
 
   handleGoBack = () => {
-    const { location, history } = this.props;
-    history.push(location?.state?.from || "/");
+    const { history } = this.props;
+    history.push(this.state.from || "/");
+
   };
 
   render() {

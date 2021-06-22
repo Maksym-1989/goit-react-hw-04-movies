@@ -5,6 +5,8 @@ import css from "./FilmsList.module.css";
 import PropTypes from "prop-types";
 
 const FilmsList = ({ films, location }) => {
+  console.log(location)
+
   return (
     <div className={css.filmsContainer}>
       <ul className={css.list}>
@@ -39,7 +41,7 @@ FilmsList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       title: PropTypes.string.isRequired,
-      poster_path: PropTypes.string.isRequired,
+      poster_path: PropTypes.string,
     })
   ),
   location: PropTypes.object.isRequired,

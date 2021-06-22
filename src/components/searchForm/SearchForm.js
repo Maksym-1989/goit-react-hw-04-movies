@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 class SearchForm extends Component {
   state = { query: "" };
 
+
   handleChange = (event) => {
     this.setState({ query: event.currentTarget.value });
   };

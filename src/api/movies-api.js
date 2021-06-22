@@ -3,9 +3,9 @@ import axios from "axios";
 const baseURL = "https://api.themoviedb.org/3";
 const apiKey = "ad3a977cd3271674fcaae0225d85ca39";
 
-const fetchPopularMovies = ({ pageNamber }) => {
+const fetchPopularMovies = ({ pageNumber }) => {
   return axios
-    .get(`${baseURL}/movie/popular?api_key=${apiKey}&page=${pageNamber}`)
+    .get(`${baseURL}/movie/popular?api_key=${apiKey}&page=${pageNumber}`)
     .then(({ data }) => data)
     .catch((error) => error);
 };
