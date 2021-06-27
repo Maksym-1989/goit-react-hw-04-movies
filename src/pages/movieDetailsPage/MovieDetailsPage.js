@@ -22,7 +22,7 @@ class MovieDetailsPage extends Component {
   };
 
   async componentDidMount() {
-    const movieId = this.props.match.params.movieId;
+    const {movieId} = this.props.match.params;
     const response = await ApiMovies.fetchMovieDetails(movieId);
     this.setState({
       movie: response,

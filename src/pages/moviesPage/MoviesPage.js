@@ -7,6 +7,11 @@ import Section from "../../components/section/Section";
 class MoviesPage extends Component {
   state = { searchQuery: "", films: [] };
 
+  componentDidMount() {
+    const query = new URLSearchParams(this.props.location.search).get("query");
+    if (query) this.setState({ searchQuery: query });
+  }
+
   componentDidUpdate(prevProps, prevState) {
     if (prevState.searchQuery !== this.state.searchQuery) {
       this.fetchFilmsWidthQuery();
@@ -15,6 +20,7 @@ class MoviesPage extends Component {
 
   fetchFilmsWidthQuery = async () => {
     const { searchQuery } = this.state;
+
     if (!searchQuery) {
       return;
     }
@@ -26,6 +32,13 @@ class MoviesPage extends Component {
     this.setState({
       searchQuery: query,
       films: [],
+    });
+
+    const { history, location } = this.props;
+
+    history.push({
+      ...location,
+      search: `query=${query}`,
     });
   };
   render() {

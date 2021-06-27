@@ -4,18 +4,18 @@ import Button from "../../components/button/Button";
 import FilmsList from "../../components/filmsList/FilmsList";
 import Section from "../../components/section/Section";
 class HomePage extends Component {
-  state = { films: [], pageNamber: 1 };
+  state = { films: [], pageNumber: 1 };
 
   componentDidMount() {
     this.fetchPopularFilms();
   }
 
   fetchPopularFilms = async () => {
-    const { pageNamber } = this.state;
-    const { results } = await ApiMovies.fetchPopularMovies({ pageNamber });
+    const { pageNumber } = this.state;
+    const { results } = await ApiMovies.fetchPopularMovies({ pageNumber });
     this.setState((prevState) => ({
       films: [...prevState.films, ...results],
-      pageNamber: prevState.pageNamber + 1,
+      pageNumber: prevState.pageNumber + 1,
     }));
   };
 

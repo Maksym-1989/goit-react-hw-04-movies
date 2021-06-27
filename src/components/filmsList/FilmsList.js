@@ -5,7 +5,6 @@ import css from "./FilmsList.module.css";
 import PropTypes from "prop-types";
 
 const FilmsList = ({ films, location }) => {
-  console.log(location)
 
   return (
     <div className={css.filmsContainer}>
